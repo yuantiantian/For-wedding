@@ -3,8 +3,8 @@
         <nav class="nav">
             <div class="logo"><img src="../assets/logo.png" alt="logo"></div>
             <div class="title">For&nbsp;wedding</div>
-            <ul>
-                <li>首页</li>
+            <ul ref="index" @mouseout="hidNav" @mouseover="showNav">
+                <li @mouseover="showNav" >首页</li>
                 <li>策划</li>
                 <li>图片</li>
                 <li>视频</li>
@@ -18,8 +18,11 @@
 <script>
     export default{
         methods:{
-            autoChande(){
-              
+            showNav(){
+                this.$refs.index.style.visibility="visible";
+            },
+            hidNav(){
+                this.$refs.index.style.visibility="hidden";
             }
         }
     }

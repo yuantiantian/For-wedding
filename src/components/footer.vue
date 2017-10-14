@@ -36,5 +36,18 @@
         font-size: 1.2rem;
         font-weight: 200;
         float: right;
+        
+    }
+    @media screen and (max-width:768px){
+        .footer>span{
+            width: 20rem;
+            height: 100%;
+            display: inline-block; 
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
     }
 </style>

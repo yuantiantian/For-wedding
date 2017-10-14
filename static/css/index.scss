@@ -20,6 +20,14 @@ html{
             height: 5rem;
             float: left;
             margin-left: 15%;
+            @media screen and (min-width:768px)and(max-width:992px){
+                margin-left:5%;
+            }
+            @media screen and (max-width:768px){
+                position: absolute;
+                left: 0;right: 20%;;
+                margin: 0 auto;   
+            }
             img{
                 width:80%;
                 height: 80%;
@@ -34,12 +42,26 @@ html{
             line-height: 5rem;
             margin-left: 1rem;
             float: left;
+            @media screen and (max-width:768px){
+                position: absolute;
+                left: 0;right: 0;;
+                margin: 0 auto;   
+            }
         }
         ul{
             width: 60rem;
             height: 5rem;
             display: inline-block;
-            margin-left: 10rem;
+            @media screen and (min-width:768px)and(max-width:992px){
+                margin-left:0;
+            }
+            @media screen and (max-width:768px){
+                width: 10rem;
+                height: 5rem;
+                display: inline-block;
+                float: right;
+                visibility: hidden;
+            }
             li{
                 width: 10rem; 
                 height: 100%;
@@ -53,6 +75,12 @@ html{
                 &:hover{
                     background-color: rgba(0,0,0,.4)
                 }
+                @media screen and (max-width:768px){
+                    
+                    &:first-child{
+                        visibility: visible;
+                    }
+                }
             }
         }    
     }
@@ -62,6 +90,9 @@ html{
         position: relative;
         top: 0;
         overflow: hidden;
+        @media screen and (max-width:768px){
+            height: 45rem; 
+        }
         .bannerd{
             width: 100%;
             height: 100%;
@@ -69,19 +100,18 @@ html{
             top: 0;
             opacity: 0;
             transition: opacity 1s;
-            
         }
         .banner1{
-            background: url(/static/images/banner1.jpg);
-            background-size:100%;
+            background: url(/static/images/banner1.jpg) center no-repeat;
+            background-size:cover;
         }
         .banner2{
-            background: url(/static/images/banner2.jpg);
-            background-size:100%;
+            background: url(/static/images/banner2.jpg) center no-repeat;
+            background-size:cover;
         }
         .banner3{
-            background: url(/static/images/banner3.jpg);
-            background-size:100%;
+            background: url(/static/images/banner3.jpg) center no-repeat;
+            background-size:cover;
         }
         .show{
             opacity: 1;
@@ -104,6 +134,9 @@ html{
                 font-size: 4rem;
                 font-weight: 200;
                 line-height: 10rem;
+                @media screen and (max-width:768px){
+                    line-height: 3rem; 
+                }
             }
             .video{
                 width: 30rem;
@@ -115,10 +148,17 @@ html{
                     width: 100%;
                     height: 100%;
                 }
+                @media screen and (max-width:768px){
+                    width: 24rem;
+                    height: 16rem;
+                }
             }
             p{
                 font-size: 1.6rem;
                line-height: 3rem; 
+               @media screen and (max-width:768px){
+                    line-height: 2rem; 
+                }
             }
             @keyframes bottomShow {
                 0% {transform: translateY(100%)}
@@ -157,7 +197,7 @@ html{
         position: absolute;
         top: 0;
         z-index: 500;
-        background-color: rgba(0,0,0,0.8);
+        background-color: rgba(0,0,0,0.8);       
         .alert{
             width: 60rem;
             height: 35rem;
@@ -165,7 +205,7 @@ html{
             position: absolute;
             left:0;right:0;top: 20rem;
             margin: 0 auto;
-            border: 1rem solid #fff;
+            border: 1rem solid #fff;animation: videoShow 1s;
             video{
                 width: 100%;
             }
@@ -183,6 +223,7 @@ html{
         width: 100%;
         height: 18rem;
         background-color: #f9dfd6;
+        position: relative;
         .left{
             width: 30%;
             height: 100%;
@@ -192,17 +233,28 @@ html{
             font-weight: 200;
             line-height:20rem;
             letter-spacing: 0.3rem;
+            @media screen and (max-width:768px){
+                display: none; 
+            }
+            span{
+                margin-left: 10rem;
+            }
             img{
                 width: 7rem;
                 height: 7rem;
-                vertical-align: middle;
-                margin-right: 5rem;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
             }
         }
         .right{
             width: 40%;
             height: 100%;
             float: left;
+            @media screen and (max-width:768px){
+                margin-left: 30%; 
+            }
             div{
                 width:25%;
                 height:50%;
@@ -216,10 +268,11 @@ html{
                     font-size: 1.2rem;
                     font-weight: 200;
                     display: block;
+                    
                 }
                 img{
                     position: absolute;
-                    right: 0;top: 30%;
+                    right: 0;top: 2rem;
                     width: 1rem;
                     height: 1rem;
                     display: inline-block;
@@ -232,15 +285,22 @@ html{
         width: 100%;
         height: 100rem;
         overflow: hidden;
+        @media screen and (max-width:768px){
+            height: 140rem;
+        }
         .bride{
             width: 100%;
-            height: 50rem;
+            height: 50%;
             .brideImg{
                 width: 50%;
                 height: 100%;
                 float: left;
-                background-image: url(/static/images/bride.jpg);
+                background: url(/static/images/bride.jpg) center no-repeat;
                 background-size: cover;
+                @media screen and (max-width:768px){
+                    width: 100%;
+                    height: 50%;
+                }
             }
             .brideInfor{
                 width: 50%;
@@ -248,6 +308,10 @@ html{
                 float: left;
                 text-align: center; 
                 transform: translateX(100%);
+                @media screen and (max-width:768px){
+                    width: 100%;
+                    height: 50%;
+                }
                 h1{
                     font: {
                         size:2.4rem;
@@ -278,13 +342,20 @@ html{
         }
         .groom{
             width: 100%;
-            height: 50rem;
+            height: 50%;
+            position: relative;
             .groomImg{
                 width: 50%;
                 height: 50rem;
                 float: left;
-                background-image: url(/static/images/groom.jpg);
+                background: url(/static/images/groom.jpg) center no-repeat;
                 background-size: cover;
+                @media screen and (max-width:768px){
+                    width: 100%;
+                    height: 50%;
+                    position: absolute;
+                    top: 0;
+                }
             }
             .groomInfor{
                 width: 50%;
@@ -292,6 +363,11 @@ html{
                 float: left;
                 text-align: center;
                 transform: translateX(-100%);
+                @media screen and (max-width:768px){
+                    width: 100%;
+                    height: 50%;
+                    margin-top: 35rem;
+                }
                 h1{
                     font: {
                         size:2.4rem;
@@ -327,8 +403,11 @@ html{
         height: 60rem;
         position: relative;
         overflow: hidden;
-        background-image: url(/static/images/cehua.jpg);
+        background: url(/static/images/cehua.jpg)  center no-repeat;
         background-size: cover;
+        @media screen and (max-width:768px){
+            height: 40rem
+        }
         .text{
             width: 70%;
             height: 50%;
@@ -356,7 +435,14 @@ html{
         margin: 3rem auto;
         text-align: center;
         position: relative;
-        overflow: hidden;
+        // overflow: hidden;
+        background-color: red;
+        @media screen and (min-width:768px)and(max-width:992px){
+            height: 80rem;
+        }
+        @media screen and (max-width:768px){
+            height: 85rem;
+        }
         div{
             cursor: pointer;
         }
@@ -385,12 +471,24 @@ html{
                     animation: photoShow 0.5s;
                 }
             }
+            @media screen and (max-width:768px){
+                width: 100%;
+                margin-left: 0;
+            }
+            @media screen and (min-width:768px)and(max-width:992px){
+                width: 42%;
+                height: 60rem;
+            }
             .left1{
                 width: 100%;
                 height: 65%;
                 background-color: orange;
-                background-image: url(/static/images/left1.jpg);
+                background: url(/static/images/left1.jpg) center no-repeat;
                 background-size: cover;
+                @media screen and (max-width:768px){
+                    width: 100%;
+                    height: 25%;
+                }
             }
             .left2,.left3{
                 width: 45%;
@@ -398,12 +496,17 @@ html{
                 background-color: skyblue;
                 float: left;
                 margin-top: 3rem;
-                background-image: url(/static/images/left2.jpg);
+                background: url(/static/images/left2.jpg)  center no-repeat;
                 background-size: cover;
+                @media screen and (max-width:768px){
+                    width: 100%;
+                    height: 25%;
+                    margin-top: 2rem;
+                }
             }
             .left3{
                 float: right;
-                background-image: url(/static/images/left3.jpg);
+                background: url(/static/images/left3.jpg)  center no-repeat;
                 background-size: cover;
             }
         }
@@ -412,6 +515,13 @@ html{
             height: 80rem;
             float: right;
             margin-right: 3rem;
+            @media screen and (min-width:768px)and(max-width:992px){
+                width: 42%;
+                height: 60rem;
+            }
+            @media screen and (max-width:768px){
+                display: none;
+            }
             .right1,.right2,.right3,.right4{
                 &:hover{
                     animation: photoShow 0.5s;
@@ -421,7 +531,7 @@ html{
                 width: 100%;
                 height: 30%;
                 background-color: orange;
-                background-image: url(/static/images/right1.jpg);
+                background: url(/static/images/right1.jpg)  center no-repeat;
                 background-size: cover;
             }
             .right2,.right3{
@@ -431,12 +541,12 @@ html{
                 float: left;
                 margin-top: 3rem;
                 margin-bottom: 4rem;
-                background-image: url(/static/images/right2.jpg);
+                background: url(/static/images/right2.jpg)  center no-repeat;
                 background-size: cover;
             }
             .right3{
                 float: right;
-                background-image: url(/static/images/right3.jpg);
+                background: url(/static/images/right3.jpg)   center no-repeat;
                 background-size: cover;
             }
             .right4{
@@ -444,7 +554,7 @@ html{
                 height: 30%;
                 background-color: orange;
                 clear: both;
-                background-image: url(/static/images/right4.jpg);
+                background: url(/static/images/right4.jpg)   center no-repeat;
                 background-size: cover;
             }
         }
@@ -460,11 +570,12 @@ html{
             &:hover{
                 color: pink;
             }
+            
         }
     }
     .follow{
         width:100%;
-        height: 70rem;
+        height: 100rem;
         background-color: #f9dfd6;
         text-align: center;
         overflow: hidden;
@@ -497,6 +608,7 @@ html{
             margin: 0 auto;
             text-align: left;
             margin-top: 2rem;
+            overflow: hidden;
             transform: translateY(50%);
             .one{
                 width: 50%;
@@ -511,20 +623,32 @@ html{
                     bottom: 0;
                     margin: auto 0;
                 }
+                @media screen and (max-width:768px){
+                    width: 100%;
+                    height: 15rem;
+                    margin-top: 2rem;
+                }
                 .touxiang{
                     width: 10rem;
                     height: 10rem;
                     background-color: orange;
-                    border-radius: 10rem;
                     float: left;
                     left: 2rem;
+                    border-radius: 10rem;
+                    @media screen and (min-width:768px)and(max-width:992px){
+                        width: 7rem;
+                        height: 7rem;
+                    }
                 }
                 .infor{
-                    width: 30rem;
+                    width: 60%;
                     height: 10rem;
                     background-color: #996969;
                     float: left;
                     left: 14rem;
+                    @media screen and (min-width:768px)and(max-width:992px){
+                        left: 10rem;
+                    }
                     h4{
                         font-size: 1.8rem;
                         line-height: 5rem;
@@ -549,10 +673,16 @@ html{
         margin: 0 auto;
         text-align: center;
         position: relative;
+        @media screen and (max-width:768px){
+            height: 25rem;
+        }
         h1{
             font-size: 3rem;
             font-weight: 200;
             line-height: 7rem;
+            @media screen and (max-width:768px){
+                line-height: 5rem;
+            }
         }
         .toLeft,.toRight{
             width: 3rem;
@@ -610,7 +740,7 @@ html{
         height: 60rem;
         text-align: center;
         position: relative;
-        background: url(/static/images/sendGift.jpg);
+        background: url(/static/images/sendGift.jpg) center no-repeat;
         background-size: cover;
         .content{
             width: 50%;
@@ -673,6 +803,11 @@ html{
     animation: bottomShow 2s; 
     transform: translateY(0) !important;
 }
+@keyframes videoShow{
+    0% { transform: scale(0,0); }
+    50% { transform: scale(1.2,1.2);}
+    100% { transform: scale(1,1); }
+}
 @keyframes leftShow{
     0% {transform: translateX(-100%)}
     25% {transform: translateX(-50%)}
@@ -707,27 +842,18 @@ html{
     50% {transform: translateY(-1rem)}
     100% {transform: translateY(0)}
 }
-@media screen and (min-width:480px){
-    img{
-        width:200px;
-        height:200px;
+@media screen and (min-width:992px)and(max-width:1200px){
+    html{
+        font-size: 50%;  
     }
-    span{
-        a{
-            color:pink;
-            &:hover{
-                color:blue;
-            }
-        }
-    } 
 }
-@media screen and (min-width:768px)and(max-width:1024px){
-    span{
-        a{
-            color:orange;
-            &:hover{
-                color:blue;
-            }
-        }
-    } 
+@media screen and (min-width:768px)and(max-width:992px){
+    html{
+        font-size: 30%;  
+    }
+}
+@media screen and (max-width:768px){
+    html{
+        font-size: 20%;  
+    }
 }

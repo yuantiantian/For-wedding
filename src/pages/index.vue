@@ -18,12 +18,12 @@
         </div>
         <div class="overlay" v-show="videoStart">
             <div class="alert">
-                <video src="../../static/video.webm" controls="controls"></video>
-                <span @click="videoStart=false">关闭</span>
+                    <video src="../../static/video.webm" controls="controls"></video>
+                    <span @click="videoStart=false">关闭</span>
             </div>
         </div>
        <div class="time">
-           <div class="left"><img src="../assets/xfeng.png"> 距离婚礼开始还有</div>
+           <div class="left"><img src="../assets/xfeng.png"><span>距离婚礼开始还有</span></div>
            <div class="right">
                <div>{{d}}<img src="../assets/heart.png"><span>Days</span></div>
                <div>{{h}}<img src="../assets/heart.png"><span>Hours</span></div>
